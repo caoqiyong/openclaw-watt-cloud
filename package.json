@@ -1,0 +1,75 @@
+{
+  "name": "openclaw-watt-cloud",
+  "version": "1.0.0",
+  "description": "OpenClaw provider plugin for Watt Cloud",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "openclaw.plugin.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=22.22.3"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "provider",
+    "watt",
+    "watt-cloud"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hidoikoto/openclaw-watt-cloud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hidoikoto/openclaw-watt-cloud/issues"
+  },
+  "homepage": "https://github.com/Hidoikoto/openclaw-watt-cloud#readme",
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1-2"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "openclaw": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ],
+    "providers": [
+      "watt-cloud"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.7.1-2",
+      "minGatewayVersion": "2026.7.1-2"
+    },
+    "build": {
+      "openclawVersion": "2026.7.1-2",
+      "pluginSdkVersion": "2026.7.1-2"
+    }
+  }
+}
