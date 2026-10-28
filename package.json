@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hidoikoto/openclaw-watt-cloud.git"
+    "url": "git+https://github.com/caoqiyong/openclaw-watt-cloud.git"
   },
   "bugs": {
-    "url": "https://github.com/Hidoikoto/openclaw-watt-cloud/issues"
+    "url": "https://github.com/caoqiyong/openclaw-watt-cloud/issues"
   },
-  "homepage": "https://github.com/Hidoikoto/openclaw-watt-cloud#readme",
+  "homepage": "https://github.com/caoqiyong/openclaw-watt-cloud#readme",
   "peerDependencies": {
     "openclaw": ">=2026.7.1-2"
   },
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "openclaw": "^2026.10.5",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
